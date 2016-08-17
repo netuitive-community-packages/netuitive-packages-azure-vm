@@ -1,0 +1,98 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Azure VM - Elevated CPU Activity (Normal Network Activity)",
+    "description" : "Increases in CPU activity are not uncommon when there is a rise in network activity. Increased traffic to a server means more work for that server to do. This policy is designed to catch cases where CPU activity is higher than than normal, and said behavior cannot be explained by a corresponding increase in network traffic. It may or may not represent a problem, but it is useful to know about.  This policy will not fire if CPU utilization is less than 20%, though.",
+    "scope" : {
+      "elementName" : null,
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
+      "elementType" : "AzureVirtualMachine",
+      "elementTags" : { }
+    },
+    "duration" : 1800,
+    "conditions" : [ {
+      "metric" : "Processor.PercentProcessorTime",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    }, {
+      "metric" : "Processor.PercentProcessorTime",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "contextualDeviation",
+      "operator" : ">",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    }, {
+      "metric" : "Processor.PercentProcessorTime",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "actual",
+      "operator" : ">",
+      "level" : 20.0,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    }, {
+      "metric" : "NetworkInterface.BytesReceived",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "baselineDeviation",
+      "operator" : "undefined",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    }, {
+      "metric" : "NetworkInterface.BytesReceived",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "contextualDeviation",
+      "operator" : "undefined",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    }, {
+      "metric" : "NetworkInterface.BytesTransmitted",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "baselineDeviation",
+      "operator" : "undefined",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    }, {
+      "metric" : "NetworkInterface.BytesTransmitted",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "contextualDeviation",
+      "operator" : "undefined",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    } ],
+    "eventConditions" : [ ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 1
+    } ],
+    "enabled" : true,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "creatorEmail" : null,
+    "lastUpdated" : null
+  }
+}

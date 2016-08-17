@@ -1,0 +1,48 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Azure VM - Heavy Disk Load",
+    "description" : "Average disk queue length is greater than expected, which could indicate a problem with heavy disk load.",
+    "scope" : {
+      "elementName" : null,
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
+      "elementType" : "AzureVirtualMachine",
+      "elementTags" : { }
+    },
+    "duration" : 300,
+    "conditions" : [ {
+      "metric" : "PhysicalDisk.AverageDiskQueueLength",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    }, {
+      "metric" : "PhysicalDisk.AverageDiskQueueLength",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "contextualDeviation",
+      "operator" : ">",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    } ],
+    "eventConditions" : [ ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 2
+    } ],
+    "enabled" : true,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "creatorEmail" : null,
+    "lastUpdated" : null
+  }
+}

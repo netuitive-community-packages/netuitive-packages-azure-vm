@@ -1,0 +1,28 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "ACE",
+    "id" : null,
+    "packageId" : null,
+    "name" : "Azure VM",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "AzureVirtualMachine",
+      "elementTags" : null,
+      "metricMatches" : null
+    },
+    "metrics" : [ {
+      "match" : "Memory.PagesPerSec|Memory.PercentUsedMemory|NetworkInterface.BytesReceived|NetworkInterface.BytesTransmitted|PhysicalDisk.AverageDiskQueueLength|Processor.PercentProcessorTime",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "NetworkInterface\\.Total.*|Processor.Percent(DPC|Interrupt|IOWait|Nice)Time",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    } ]
+  }
+}

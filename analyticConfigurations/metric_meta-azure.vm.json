@@ -1,0 +1,108 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "METRIC_META",
+    "id" : null,
+    "packageId" : null,
+    "name" : "Azure VM",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "AzureVirtualMachine",
+      "elementTags" : null,
+      "metricMatches" : null
+    },
+    "metrics" : [ {
+      "match" : "Memory\\.(Available_|Used_).*",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }, {
+      "match" : "Memory\\.Pages.*",
+      "properties" : {
+        "tags" : {
+          "unit" : "Pps"
+        }
+      }
+    }, {
+      "match" : "Memory\\.Percent(AvailableMemory|AvailableSwap|UsedByCache|UsedSwap)",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent"
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "Memory.PercentUsedMemory",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent",
+          "utilization" : "true"
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "NetworkInterface\\.Bytes.*",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        },
+        "type" : "COUNTER"
+      }
+    }, {
+      "match" : "NetworkInterface\\.(Packets|Total).*",
+      "properties" : {
+        "tags" : {
+          "unit" : "count"
+        },
+        "type" : "COUNTER"
+      }
+    }, {
+      "match" : "PhysicalDisk.AverageDiskQueueLength",
+      "properties" : {
+        "tags" : {
+          "unit" : "count"
+        }
+      }
+    }, {
+      "match" : "PhysicalDisk\\.Average.*Time$",
+      "properties" : {
+        "tags" : {
+          "unit" : "milliseconds"
+        }
+      }
+    }, {
+      "match" : "PhysicalDisk\\..*BytesPerSecond$",
+      "properties" : {
+        "tags" : {
+          "unit" : "Bps"
+        }
+      }
+    }, {
+      "match" : "PhysicalDisk\\.(Reads|Transfers|Writes)PerSecond$",
+      "properties" : {
+        "tags" : {
+          "unit" : "iops"
+        }
+      }
+    }, {
+      "match" : "Processor\\.Percent(DPC|Interrupt|IOWait|Nice|Privileged|User)Time$",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent"
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "Processor.PercentProcessorTime",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent",
+          "utilization" : "true"
+        },
+        "validMax" : 100
+      }
+    } ]
+  }
+}
