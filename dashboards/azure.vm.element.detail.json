@@ -29,7 +29,7 @@
         "useElementNameContains" : "true",
         "useAllElementScopeTags" : "false",
         "element_id" : null,
-        "elementScopeTypes" : "[\"AzureVirtualMachine\"]",
+        "elementScopeTypes" : "[\"AzureVirtualMachine\",\"Azure VM\"]",
         "metricLimit" : "10",
         "useAllMetricScopeTags" : "false",
         "metricUnit" : null,
@@ -48,7 +48,7 @@
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-08-17T03:01:10Z",
-      "updated" : "2016-08-17T03:06:42Z"
+      "updated" : "2016-08-17T15:03:05Z"
     }, {
       "id" : "bcc698a7-277c-4b6f-b919-a7a1ad8b27a4",
       "name" : "CPU Utilization",
@@ -186,7 +186,7 @@
         "useElementNameContains" : "true",
         "useAllElementScopeTags" : "false",
         "element_id" : null,
-        "elementScopeTypes" : "[\"AzureVirtualMachine\"]",
+        "elementScopeTypes" : "[\"AzureVirtualMachine\",\"Azure VM\"]",
         "metricLimit" : "10",
         "useAllMetricScopeTags" : "false",
         "metricUnit" : null,
@@ -205,7 +205,7 @@
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-08-17T03:01:10Z",
-      "updated" : "2016-08-17T03:07:13Z"
+      "updated" : "2016-08-17T15:03:26Z"
     } ],
     "type" : "AZURE VM",
     "private" : false
