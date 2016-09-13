@@ -69,7 +69,7 @@
       "match" : "PhysicalDisk\\.Average.*Time$",
       "properties" : {
         "tags" : {
-          "unit" : "milliseconds"
+          "unit" : "ms"
         }
       }
     }, {
