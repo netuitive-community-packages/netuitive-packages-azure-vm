@@ -8,13 +8,13 @@
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],
-      "elementType" : "Azure VM",
+      "elementType" : null,
       "elementTags" : { }
     },
     "duration" : 900,
     "conditions" : [ {
-      "metric" : "Memory.PercentUsedMemory",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.memory.percentusedmemory",
       "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : ">",
@@ -23,8 +23,8 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "Memory.PercentUsedMemory",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.memory.percentusedmemory",
       "metricScopeTags" : { },
       "analytic" : "contextualDeviation",
       "operator" : ">",

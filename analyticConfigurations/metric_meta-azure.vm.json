@@ -7,98 +7,37 @@
     "name" : "Azure VM",
     "scope" : {
       "elementName" : null,
-      "elementType" : "Azure VM",
+      "elementType" : null,
       "elementTags" : null,
-      "metricMatches" : null
+      "metricMatches" : "^azure\\.(virtualmachine|virtualmachineclassic)\\..*"
     },
     "metrics" : [ {
-      "match" : "Memory\\.(Available_|Used_).*",
+      "match" : ".*\\.memory.percent(?!usedmemory)",
       "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "Memory\\.Pages.*",
-      "properties" : {
-        "tags" : {
-          "unit" : "Pps"
-        }
-      }
-    }, {
-      "match" : "Memory\\.Percent(AvailableMemory|AvailableSwap|UsedByCache|UsedSwap)",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
         "validMax" : 100
       }
     }, {
-      "match" : "Memory.PercentUsedMemory",
+      "match" : ".*\\.memory.percentusedmemory",
       "properties" : {
         "tags" : {
-          "unit" : "percent",
           "utilization" : "true"
         },
         "validMax" : 100
       }
     }, {
-      "match" : "NetworkInterface\\.Bytes.*",
+      "match" : ".*\\.networkinterface.*",
       "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        },
         "type" : "COUNTER"
       }
     }, {
-      "match" : "NetworkInterface\\.(Packets|Total).*",
+      "match" : ".*\\.processor.*",
       "properties" : {
-        "tags" : {
-          "unit" : "count"
-        },
-        "type" : "COUNTER"
-      }
-    }, {
-      "match" : "PhysicalDisk.AverageDiskQueueLength",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "PhysicalDisk\\.Average.*Time$",
-      "properties" : {
-        "tags" : {
-          "unit" : "ms"
-        }
-      }
-    }, {
-      "match" : "PhysicalDisk\\..*BytesPerSecond$",
-      "properties" : {
-        "tags" : {
-          "unit" : "Bps"
-        }
-      }
-    }, {
-      "match" : "PhysicalDisk\\.(Reads|Transfers|Writes)PerSecond$",
-      "properties" : {
-        "tags" : {
-          "unit" : "iops"
-        }
-      }
-    }, {
-      "match" : "Processor\\.Percent(DPC|Interrupt|IOWait|Nice|Privileged|User)Time$",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
         "validMax" : 100
       }
     }, {
-      "match" : "Processor.PercentProcessorTime",
+      "match" : ".*\\.percentagecpu",
       "properties" : {
         "tags" : {
-          "unit" : "percent",
           "utilization" : "true"
         },
         "validMax" : 100

@@ -8,13 +8,13 @@
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],
-      "elementType" : "Azure VM",
+      "elementType" : null,
       "elementTags" : { }
     },
-    "duration" : 300,
+    "duration" : 900,
     "conditions" : [ {
-      "metric" : "PhysicalDisk.AverageDiskQueueLength",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.physicaldisk.averagediskqueuelength",
       "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : ">",
@@ -23,8 +23,8 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "PhysicalDisk.AverageDiskQueueLength",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.physicaldisk.averagediskqueuelength",
       "metricScopeTags" : { },
       "analytic" : "contextualDeviation",
       "operator" : ">",

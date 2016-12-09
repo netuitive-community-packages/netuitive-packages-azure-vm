@@ -1,8 +1,12 @@
-#netuitive.packages.azure.vm 1.0.2
+#netuitive.packages.azure.vm 2.0.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/datasources.htm).
 
 ##Release History
+
+###Version 2.0.0
+
+* Updated package to work with new metric names, as well as collection of "classic" virtual machines.
 
 ###Version 1.0.2
 
