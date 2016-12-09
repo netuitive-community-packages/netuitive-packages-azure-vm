@@ -8,13 +8,13 @@
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],
-      "elementType" : "Azure VM",
+      "elementType" : null,
       "elementTags" : { }
     },
     "duration" : 1800,
     "conditions" : [ {
-      "metric" : "Processor.PercentProcessorTime",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.percentagecpu",
       "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : ">",
@@ -23,8 +23,8 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "Processor.PercentProcessorTime",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.percentagecpu",
       "metricScopeTags" : { },
       "analytic" : "contextualDeviation",
       "operator" : ">",
@@ -33,8 +33,8 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "Processor.PercentProcessorTime",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.percentagecpu",
       "metricScopeTags" : { },
       "analytic" : "actual",
       "operator" : ">",
@@ -43,8 +43,8 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "NetworkInterface.BytesReceived",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.networkin",
       "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : "undefined",
@@ -53,8 +53,8 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "NetworkInterface.BytesReceived",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.networkin",
       "metricScopeTags" : { },
       "analytic" : "contextualDeviation",
       "operator" : "undefined",
@@ -63,8 +63,8 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "NetworkInterface.BytesTransmitted",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.networkout",
       "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : "undefined",
@@ -73,8 +73,8 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "NetworkInterface.BytesTransmitted",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.networkout",
       "metricScopeTags" : { },
       "analytic" : "contextualDeviation",
       "operator" : "undefined",

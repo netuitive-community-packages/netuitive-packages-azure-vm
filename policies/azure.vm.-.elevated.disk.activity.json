@@ -8,13 +8,13 @@
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],
-      "elementType" : "Azure VM",
+      "elementType" : null,
       "elementTags" : { }
     },
     "duration" : 1800,
     "conditions" : [ {
-      "metric" : "PhysicalDisk.ReadsPerSecond",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.diskreadoperationssec",
       "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : ">",
@@ -23,30 +23,10 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "PhysicalDisk.ReadsPerSecond",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "PhysicalDisk.WritesPerSecond",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.diskwriteoperationssec",
       "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "PhysicalDisk.WritesPerSecond",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
       "operator" : ">",
       "level" : null,
       "level2" : null,

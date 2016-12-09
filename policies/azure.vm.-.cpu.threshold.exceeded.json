@@ -8,13 +8,13 @@
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],
-      "elementType" : "Azure VM",
+      "elementType" : null,
       "elementTags" : { }
     },
     "duration" : 900,
     "conditions" : [ {
-      "metric" : "Processor.PercentProcessorTime",
-      "wildcard" : null,
+      "metric" : null,
+      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.percentagecpu",
       "metricScopeTags" : { },
       "analytic" : "actual",
       "operator" : ">",

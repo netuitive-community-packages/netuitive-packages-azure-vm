@@ -7,18 +7,42 @@
     "name" : "Azure VM",
     "scope" : {
       "elementName" : null,
-      "elementType" : "Azure VM",
+      "elementType" : null,
       "elementTags" : null,
-      "metricMatches" : null
+      "metricMatches" : "^azure\\.(virtualmachine|virtualmachineclassic)\\..*"
     },
     "metrics" : [ {
-      "match" : "Memory.PagesPerSec|Memory.PercentUsedMemory|NetworkInterface.BytesReceived|NetworkInterface.BytesTransmitted|PhysicalDisk.AverageDiskQueueLength|Processor.PercentProcessorTime",
+      "match" : ".*\\.(networkin|networkout)",
       "properties" : {
         "baseline" : true,
         "correlation" : true
       }
     }, {
-      "match" : "NetworkInterface\\.Total.*|Processor.Percent(DPC|Interrupt|IOWait|Nice)Time",
+      "match" : ".*\\.networkinterface.(totalcollisions|totalrxerrors|totaltxerrors)",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : ".*\\.percentagecpu",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : ".*\\.memory.(pagespersec|percentusedmemory)",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : ".*\\.physicaldisk.averagediskqueuelength",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : ".*\\.processor.(percentdpctime|percentinterrupttime|percentiowaittime|percentnicetime)",
       "properties" : {
         "baseline" : false,
         "correlation" : false

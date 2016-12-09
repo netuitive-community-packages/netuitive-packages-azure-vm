@@ -1,6 +1,6 @@
 {
   "id" : "netuitive.packages.azure.vm",
-  "version" : "1.0.2",
+  "version" : "2.0.0",
   "manifest" : {
     "name" : "Netuitive Packages Azure VM",
     "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of Azure Virtual Machine resources.",
@@ -12,7 +12,7 @@
       "logo" : "http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png",
       "download" : "https://github.com/netuitive-community-packages/netuitive-packages-azure-vm/archive/master.zip"
     },
-    "compatibility" : [ "Azure:VM" ],
+    "compatibility" : [ "Azure:Virtual Machine" ],
     "tags" : [ ],
     "checksum" : null
   },
@@ -75,6 +75,18 @@
   }, {
     "data" : {
       "file" : "dashboards/azure.vm.element.detail.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "dashboards/azure.vm.classic.element.detail.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "dashboards/azure.vm.classic.summary.json",
       "encoding" : "application/json",
       "content" : null
     }
