@@ -211,7 +211,7 @@
       "created" : "2016-12-09T20:55:34Z",
       "updated" : "2016-12-09T20:57:48Z"
     } ],
-    "type" : "Virtual Machine Classic",
+    "type" : "VIRTUAL MACHINE CLASSIC",
     "private" : false
   }
 }
