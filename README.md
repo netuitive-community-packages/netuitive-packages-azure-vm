@@ -1,8 +1,12 @@
-#netuitive.packages.azure.vm 2.0.0
+#netuitive.packages.azure.vm 2.0.1
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/datasources.htm).
 
 ##Release History
+
+###Version 2.0.1
+
+* Bug fix: corrected typos in the element detail dashboards that prevented them from being associated with the VM elements.
 
 ###Version 2.0.0
 
