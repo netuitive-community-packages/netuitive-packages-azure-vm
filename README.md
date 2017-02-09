@@ -1,6 +1,6 @@
 #netuitive.packages.azure.vm 2.0.1
 
-For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/datasources.htm).
+For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/microsoft_azure.htm).
 
 ##Release History
 
