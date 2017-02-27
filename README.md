@@ -1,8 +1,12 @@
-#netuitive.packages.azure.vm 2.0.1
+#netuitive.packages.azure.vm 2.2.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/microsoft_azure.htm).
 
 ##Release History
+
+###Version 2.2.0
+
+* Updated dashboard layouts for gridstack.
 
 ###Version 2.0.1
 
