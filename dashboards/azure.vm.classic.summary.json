@@ -10,7 +10,7 @@
       "density" : "normal",
       "refreshIntervalSeconds" : "300",
       "wrap" : "true",
-      "gridstackContents" : "[{\"id\":\"b380cad9-924d-44e5-8742-f75bd3dca77d\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"c806d4c6-addb-4522-9ea0-7bd6f5787367\",\"x\":0,\"y\":0,\"width\":12,\"height\":9},{\"id\":\"9fca8515-d011-4dcc-9980-42edb85ca0b0\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"ad3e6b44-f55b-4dba-a7da-549184edf61b\",\"x\":6,\"y\":18,\"width\":6,\"height\":8},{\"id\":\"6c1a1818-8475-4de7-b4e1-b36b8176d4c7\",\"x\":0,\"y\":9,\"width\":6,\"height\":9}]"
+      "gridstackContents": "[{\"id\":\"b380cad9-924d-44e5-8742-f75bd3dca77d\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"c806d4c6-addb-4522-9ea0-7bd6f5787367\",\"x\":0,\"y\":0,\"width\":12,\"height\":9},{\"id\":\"9fca8515-d011-4dcc-9980-42edb85ca0b0\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"ad3e6b44-f55b-4dba-a7da-549184edf61b\",\"x\":6,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"6c1a1818-8475-4de7-b4e1-b36b8176d4c7\",\"x\":0,\"y\":9,\"width\":6,\"height\":9}]"
     },
     "tenantId" : null,
     "userId" : null,
