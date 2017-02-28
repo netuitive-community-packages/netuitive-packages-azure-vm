@@ -1,8 +1,12 @@
-#netuitive.packages.azure.vm 2.1.0
+#netuitive.packages.azure.vm 2.1.1
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/microsoft_azure.htm).
 
 ##Release History
+
+###Version 2.1.1
+
+* Bug fix: Azure VM Classic Summary Dashboard widget was the incorrect size.
 
 ###Version 2.1.0
 
