@@ -1,4 +1,4 @@
-# netuitive.packages.azure.vm 2.1.1
+# netuitive.packages.azure.vm
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/microsoft_azure.htm).
 
@@ -6,6 +6,7 @@ For detailed information on this package, please refer to the [online documentat
 
 ### Version next
 
+* Updated Details Dashboard layouts
 * Bug fix: #13 Convert single elementType to ElementTypes array in policy scopes
 
 ### Version 2.1.1
