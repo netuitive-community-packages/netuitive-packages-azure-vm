@@ -4,6 +4,10 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version next
+
+* Bug fix: #13 Convert single elementType to ElementTypes array in policy scopes
+
 ### Version 2.1.1
 
 * Bug fix: Azure VM Classic Summary Dashboard widget was the incorrect size.
