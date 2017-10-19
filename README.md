@@ -4,7 +4,7 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
-### Version next
+### Version 2.2.0
 
 * Updated Details Dashboard layouts
 * Bug fix: #13 Convert single elementType to ElementTypes array in policy scopes
