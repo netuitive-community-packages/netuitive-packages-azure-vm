@@ -1,187 +1,120 @@
 {
-  "dashboard" : {
-    "name" : "Azure VM Element Detail",
-    "description" : null,
-    "layout" : null,
-    "properties" : {
-      "integrationType" : null,
-      "timeRangeDuration" : "3600",
-      "gridstackContents" : "[{\"id\":\"b926fbb3-ae2c-4a77-bc5b-b2c2c7ecf6b1\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"bcc698a7-277c-4b6f-b919-a7a1ad8b27a4\",\"x\":4,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"4fdd3423-5a79-4cb5-b3e6-01f4c319cbf2\",\"x\":0,\"y\":9,\"width\":6,\"height\":10},{\"id\":\"583a6b30-c55c-4a1d-a4c3-dada53c4ebf2\",\"x\":0,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"443d84c8-7d23-402d-a8b8-6afd7497ab45\",\"x\":6,\"y\":9,\"width\":6,\"height\":10},{\"id\":\"493ca430-2c16-4034-be73-733e6d4098f0\",\"x\":0,\"y\":19,\"width\":12,\"height\":9}]",
-      "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+  "dashboard": {
+    "name": "Azure VM Element Detail",
+    "private": false,
+    "properties": {
+      "gridstackContents": "[{\"id\":\"b926fbb3-ae2c-4a77-bc5b-b2c2c7ecf6b1\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"bcc698a7-277c-4b6f-b919-a7a1ad8b27a4\",\"x\":4,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"4fdd3423-5a79-4cb5-b3e6-01f4c319cbf2\",\"x\":0,\"y\":9,\"width\":6,\"height\":10},{\"id\":\"583a6b30-c55c-4a1d-a4c3-dada53c4ebf2\",\"x\":0,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"443d84c8-7d23-402d-a8b8-6afd7497ab45\",\"x\":6,\"y\":9,\"width\":6,\"height\":10},{\"id\":\"493ca430-2c16-4034-be73-733e6d4098f0\",\"x\":0,\"y\":19,\"width\":12,\"height\":9}]",
+      "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
+      "wrap": "true"
     },
-    "widgets" : [ {
-      "id" : "b926fbb3-ae2c-4a77-bc5b-b2c2c7ecf6b1",
-      "name" : "Network Bytes Received and Transmitted",
-      "description" : null,
-      "widgetType" : "stacked-area",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "false",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"Virtual Machine\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "false",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : "",
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[{\"fqn\":\"netuitive.aws.ec2.bytesinpersec\",\"aggFns\":[]},{\"fqn\":\"netuitive.aws.ec2.bytesoutpersec\",\"aggFns\":[]},{\"fqn\":\"NetworkInterface.BytesReceived\",\"aggFn\":\"avg\",\"aggFns\":[]},{\"fqn\":\"NetworkInterface.BytesTransmitted\",\"aggFn\":\"avg\",\"aggFns\":[]},{\"fqn\":\"azure.virtualmachine.networkin\",\"aggFns\":[]},{\"fqn\":\"azure.virtualmachine.networkout\",\"aggFns\":[]}]",
-        "selectedTab" : "table"
+    "type": "VIRTUAL MACHINE",
+    "widgets": [
+      {
+        "id": "b926fbb3-ae2c-4a77-bc5b-b2c2c7ecf6b1",
+        "name": "Network Bytes Received and Transmitted",
+        "properties": {
+          "elementScopeTypes": "[\"Virtual Machine\"]",
+          "metricLimit": "10",
+          "metrics": "[{\"fqn\":\"netuitive.aws.ec2.bytesinpersec\",\"aggFns\":[]},{\"fqn\":\"netuitive.aws.ec2.bytesoutpersec\",\"aggFns\":[]},{\"fqn\":\"NetworkInterface.BytesReceived\",\"aggFn\":\"avg\",\"aggFns\":[]},{\"fqn\":\"NetworkInterface.BytesTransmitted\",\"aggFn\":\"avg\",\"aggFns\":[]},{\"fqn\":\"azure.virtualmachine.networkin\",\"aggFns\":[]},{\"fqn\":\"azure.virtualmachine.networkout\",\"aggFns\":[]}]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "false",
+          "useAllMetricScopeTags": "false",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "stacked-area"
+      },
+      {
+        "id": "bcc698a7-277c-4b6f-b919-a7a1ad8b27a4",
+        "name": "CPU Utilization",
+        "properties": {
+          "element_fqn": "VirtualMachine:d0414526-503b-4719-8493-a37a20d11877",
+          "element_id": "11ed3514-4fe6-338e-9222-7bb198787150",
+          "metricAggs": "[\"avg\"]",
+          "metricLimit": "10",
+          "metric_fqn": "azure.virtualmachine.percentagecpu",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "metric-time-series"
+      },
+      {
+        "id": "4fdd3423-5a79-4cb5-b3e6-01f4c319cbf2",
+        "name": "Attributes",
+        "properties": {
+          "element_fqn": "VirtualMachine:d0414526-503b-4719-8493-a37a20d11877",
+          "element_id": "11ed3514-4fe6-338e-9222-7bb198787150",
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-attributes"
+      },
+      {
+        "id": "583a6b30-c55c-4a1d-a4c3-dada53c4ebf2",
+        "name": "Current CPU Utilization",
+        "properties": {
+          "element_fqn": "VirtualMachine:d0414526-503b-4719-8493-a37a20d11877",
+          "element_id": "11ed3514-4fe6-338e-9222-7bb198787150",
+          "metricLimit": "10",
+          "metric_fqn": "azure.virtualmachine.percentagecpu",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "auto"
+        },
+        "widgetType": "metric-status"
+      },
+      {
+        "id": "443d84c8-7d23-402d-a8b8-6afd7497ab45",
+        "name": "Tags",
+        "properties": {
+          "element_fqn": "VirtualMachine:d0414526-503b-4719-8493-a37a20d11877",
+          "element_id": "11ed3514-4fe6-338e-9222-7bb198787150",
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "element-tags"
+      },
+      {
+        "id": "493ca430-2c16-4034-be73-733e6d4098f0",
+        "name": "Events",
+        "properties": {
+          "elementScopeTypes": "[\"Virtual Machine\"]",
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "false",
+          "useAllMetricScopeTags": "false",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "event-ticker"
       }
-    }, {
-      "id" : "bcc698a7-277c-4b6f-b919-a7a1ad8b27a4",
-      "name" : "CPU Utilization",
-      "description" : null,
-      "widgetType" : "metric-time-series",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : "11ed3514-4fe6-338e-9222-7bb198787150",
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "element_fqn" : "VirtualMachine:d0414526-503b-4719-8493-a37a20d11877",
-        "metricUnit" : null,
-        "metricAggs" : "[\"avg\"]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "azure.virtualmachine.percentagecpu",
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "4fdd3423-5a79-4cb5-b3e6-01f4c319cbf2",
-      "name" : "Attributes",
-      "description" : null,
-      "widgetType" : "element-attributes",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : "11ed3514-4fe6-338e-9222-7bb198787150",
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "element_fqn" : "VirtualMachine:d0414526-503b-4719-8493-a37a20d11877",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "583a6b30-c55c-4a1d-a4c3-dada53c4ebf2",
-      "name" : "Current CPU Utilization",
-      "description" : null,
-      "widgetType" : "metric-status",
-      "properties" : {
-        "visualization" : "gauge",
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : "11ed3514-4fe6-338e-9222-7bb198787150",
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "element_fqn" : "VirtualMachine:d0414526-503b-4719-8493-a37a20d11877",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "azure.virtualmachine.percentagecpu",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "443d84c8-7d23-402d-a8b8-6afd7497ab45",
-      "name" : "Tags",
-      "description" : null,
-      "widgetType" : "element-tags",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : "11ed3514-4fe6-338e-9222-7bb198787150",
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "element_fqn" : "VirtualMachine:d0414526-503b-4719-8493-a37a20d11877",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "493ca430-2c16-4034-be73-733e6d4098f0",
-      "name" : "Events",
-      "description" : null,
-      "widgetType" : "event-ticker",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "false",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"Virtual Machine\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "false",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : "",
-        "showHighest" : "true",
-        "metric_fqn" : null,
-        "metricScopeTags" : "[]",
-        "width" : "medium",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    } ],
-    "type" : "VIRTUAL MACHINE",
-    "private" : false
+    ]
   }
 }
