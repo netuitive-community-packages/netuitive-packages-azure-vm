@@ -48,6 +48,11 @@
     "description": "Increases in CPU activity are not uncommon when there is a rise in network activity. Increased traffic to a server means more work for that server to do. This policy is designed to catch cases where CPU activity is higher than than normal, and said behavior cannot be explained by a corresponding increase in network traffic. It may or may not represent a problem, but it is useful to know about.  This policy will not fire if CPU utilization is less than 20%, though.",
     "duration": 1800,
     "enabled": true,
-    "name": "Azure VM - Elevated CPU Activity (Normal Network Activity)"
+    "name": "Azure VM - Elevated CPU Activity (Normal Network Activity)",
+    "scope": {
+      "elementTypes": [
+        "Virtual Machine"
+      ]
+    }
   }
 }

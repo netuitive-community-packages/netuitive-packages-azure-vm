@@ -22,6 +22,11 @@
     "description": "Average disk queue length is greater than expected, which could indicate a problem with heavy disk load.",
     "duration": 900,
     "enabled": true,
-    "name": "Azure VM - Heavy Disk Load"
+    "name": "Azure VM - Heavy Disk Load",
+    "scope": {
+      "elementTypes": [
+        "Virtual Machine"
+      ]
+    }
   }
 }
