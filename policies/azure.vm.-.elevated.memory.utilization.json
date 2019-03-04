@@ -22,6 +22,11 @@
     "description": "The memory utilization on the Azure Virtual Machine is higher than expected.",
     "duration": 900,
     "enabled": true,
-    "name": "Azure VM - Elevated Memory Utilization"
+    "name": "Azure VM - Elevated Memory Utilization",
+    "scope": {
+      "elementTypes": [
+        "Virtual Machine"
+      ]
+    }
   }
 }

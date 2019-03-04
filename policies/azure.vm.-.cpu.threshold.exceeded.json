@@ -18,6 +18,11 @@
     "description": "The CPU on the Azure Virtual Machine has exceeded 95% for at least 15 minutes.",
     "duration": 900,
     "enabled": true,
-    "name": "Azure VM - CPU Threshold Exceeded"
+    "name": "Azure VM - CPU Threshold Exceeded",
+    "scope": {
+      "elementTypes": [
+        "Virtual Machine"
+      ]
+    }
   }
 }

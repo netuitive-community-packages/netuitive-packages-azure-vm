@@ -32,6 +32,11 @@
     "description": "Network activity has been higher than expected for at least 30 minutes.",
     "duration": 1800,
     "enabled": true,
-    "name": "Azure VM - Elevated Network Activity"
+    "name": "Azure VM - Elevated Network Activity",
+    "scope": {
+      "elementTypes": [
+        "Virtual Machine"
+      ]
+    }
   }
 }
