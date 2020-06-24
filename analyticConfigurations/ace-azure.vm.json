@@ -1,52 +1,53 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "ACE",
-    "id" : null,
-    "packageId" : null,
-    "name" : "Azure VM",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : null,
-      "elementTags" : null,
-      "metricMatches" : "^azure\\.(virtualmachine|virtualmachineclassic)\\..*"
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": ".*\\.(networkin|networkout)",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": ".*\\.networkinterface.(totalcollisions|totalrxerrors|totaltxerrors)",
+        "properties": {
+          "baseline": false,
+          "correlation": false
+        }
+      },
+      {
+        "match": ".*\\.percentagecpu",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": ".*\\.memory.(pagespersec|percentusedmemory)",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": ".*\\.physicaldisk.averagediskqueuelength",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": ".*\\.processor.(percentdpctime|percentinterrupttime|percentiowaittime|percentnicetime)",
+        "properties": {
+          "baseline": false,
+          "correlation": false
+        }
+      }
+    ],
+    "name": "Azure VM",
+    "scope": {
+      "metricMatches": "^azure\\.(virtualmachine|virtualmachineclassic)\\..*"
     },
-    "metrics" : [ {
-      "match" : ".*\\.(networkin|networkout)",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : ".*\\.networkinterface.(totalcollisions|totalrxerrors|totaltxerrors)",
-      "properties" : {
-        "baseline" : false,
-        "correlation" : false
-      }
-    }, {
-      "match" : ".*\\.percentagecpu",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : ".*\\.memory.(pagespersec|percentusedmemory)",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : ".*\\.physicaldisk.averagediskqueuelength",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : ".*\\.processor.(percentdpctime|percentinterrupttime|percentiowaittime|percentnicetime)",
-      "properties" : {
-        "baseline" : false,
-        "correlation" : false
-      }
-    } ]
+    "type": "ACE"
   }
 }

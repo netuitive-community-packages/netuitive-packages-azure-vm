@@ -1,47 +1,47 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "Azure VM",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : null,
-      "elementTags" : null,
-      "metricMatches" : "^azure\\.(virtualmachine|virtualmachineclassic)\\..*"
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": ".*\\.memory.percent(?!usedmemory)",
+        "properties": {
+          "validMax": 100
+        }
+      },
+      {
+        "match": ".*\\.memory.percentusedmemory",
+        "properties": {
+          "tags": {
+            "utilization": "true"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": ".*\\.networkinterface.*",
+        "properties": {
+          "type": "COUNTER"
+        }
+      },
+      {
+        "match": ".*\\.processor.*",
+        "properties": {
+          "validMax": 100
+        }
+      },
+      {
+        "match": ".*\\.percentagecpu",
+        "properties": {
+          "tags": {
+            "utilization": "true"
+          },
+          "validMax": 100
+        }
+      }
+    ],
+    "name": "Azure VM",
+    "scope": {
+      "metricMatches": "^azure\\.(virtualmachine|virtualmachineclassic)\\..*"
     },
-    "metrics" : [ {
-      "match" : ".*\\.memory.percent(?!usedmemory)",
-      "properties" : {
-        "validMax" : 100
-      }
-    }, {
-      "match" : ".*\\.memory.percentusedmemory",
-      "properties" : {
-        "tags" : {
-          "utilization" : "true"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : ".*\\.networkinterface.*",
-      "properties" : {
-        "type" : "COUNTER"
-      }
-    }, {
-      "match" : ".*\\.processor.*",
-      "properties" : {
-        "validMax" : 100
-      }
-    }, {
-      "match" : ".*\\.percentagecpu",
-      "properties" : {
-        "tags" : {
-          "utilization" : "true"
-        },
-        "validMax" : 100
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }

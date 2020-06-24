@@ -1,38 +1,28 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "Azure VM - CPU Threshold Exceeded",
-    "description" : "The CPU on the Azure Virtual Machine has exceeded 95% for at least 15 minutes.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementTypes": [],
-      "elementTags" : { }
-    },
-    "duration" : 900,
-    "conditions" : [ {
-      "metric" : null,
-      "wildcard" : "azure\\.(virtualmachine|virtualmachineclassic)\\.percentagecpu",
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : ">",
-      "level" : 95.0,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "actual",
+        "level": 95,
+        "operator": ">",
+        "wildcard": "azure\\.(virtualmachine|virtualmachineclassic)\\.percentagecpu"
+      }
+    ],
+    "deleted": false,
+    "description": "The CPU on the Azure Virtual Machine has exceeded 95% for at least 15 minutes.",
+    "duration": 900,
+    "enabled": true,
+    "name": "Azure VM - CPU Threshold Exceeded",
+    "scope": {
+      "elementTypes": [
+        "Virtual Machine"
+      ]
+    }
   }
 }
